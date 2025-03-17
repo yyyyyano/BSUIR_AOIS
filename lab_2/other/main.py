@@ -12,7 +12,7 @@ sdnf = logic.generate_sdnf(header, table)
 print("SDNF: ", sdnf)
 
 sknf = logic.generate_sknf(header, table)
-print("SCNF: ", sknf)
+print("SKNF: ", sknf)
 
 print(f"Index form: {logic.get_idx_form(table)[0]} - [{logic.get_idx_form(table)[1]}]")
 print(f"Number form: {logic.get_num_form(table)[0]}\n             {logic.get_num_form(table)[1]}")
