@@ -9,10 +9,10 @@ header, table = logic.compute_truth_table(subformulas, operations)
 logic.print_truth_table(header, table)
 
 sdnf = logic.generate_sdnf(header, table)
-print("PDNF: ", sdnf)
+print("SDNF: ", sdnf)
 
 sknf = logic.generate_sknf(header, table)
-print("PCNF: ", sknf)
+print("SCNF: ", sknf)
 
 print(f"Index form: {logic.get_idx_form(table)[0]} - [{logic.get_idx_form(table)[1]}]")
 print(f"Number form: {logic.get_num_form(table)[0]}\n             {logic.get_num_form(table)[1]}")
