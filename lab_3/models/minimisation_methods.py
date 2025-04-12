@@ -286,8 +286,8 @@ class MinimisationMethods:
         visited = [[False] * len(col_values) for _ in row_values]
 
         values_combinations = []
-        for h in [16, 8, 4, 2, 1]:
-            for w in [16, 8, 4, 2, 1]:
+        for h in [32, 16, 8, 4, 2, 1]:
+            for w in [32, 16, 8, 4, 2, 1]:
                 for y in range(len(table)):
                     for x in range(len(table[0])):
                         group = MinimisationMethods.__get_group(x, y, h, w, table)
