@@ -60,3 +60,15 @@ def test_carno_sdnf(capsys, norm_formula, expected_implicants):
     captured = capsys.readouterr()
     for imp in expected_implicants:
         assert imp in captured.out
+
+@pytest.mark.parametrize("norm_formula", [
+    ("(!A & B & C & B & D & E & F)"),
+])
+def test_carno_sdnf_more_five(capsys, norm_formula):
+    MinimisationMethods.carno_sdnf(norm_formula)
+    captured = capsys.readouterr()
+    expected_output=('Начальная формула:  (!A & B & C & B & D & E & F)\n'
+ 'Таблица Карно работает до 5 переменных\n'
+ '\n'
+ 'Тупиковая форма по Карно для СДНФ:  None\n')
+    assert expected_output in captured.out
